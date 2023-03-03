@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Örneği</title>
+    <!-- Bootstrap CSS dosyası ekle -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Merhaba, Flask Form Örneği</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.first_name.label }}<br>
+                {{ form.first_name(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.last_name.label }}<br>
+                {{ form.last_name(class_="form-control") }}
+            </div>
+            <button type="submit" class="btn btn-primary">Gönder</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS dosyası ekle -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
